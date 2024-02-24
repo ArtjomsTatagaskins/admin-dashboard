@@ -17,7 +17,7 @@
     display: grid;
     height: 100%;
     width: 100%;
-    grid-template-columns: 2fr 7fr;
+    grid-template-columns: 2fr 8fr;
     grid-template-rows: 2fr 8fr;
 }
 
@@ -32,6 +32,27 @@
     padding-top: 10%;
     gap: 25px;
 }
+
+.nav-panel a {
+    color: #FFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-panel img[alt='dashboard'] {
+    height: 60px;
+}
+
+.nav-panel a img {
+    height: 30px;
+    padding-right: 15px;
+}
+
+.nav-panel a:hover {
+    color: #AAA;
+}
+
 
 .upper-nav-panel {
     font-weight: 800;
@@ -78,12 +99,34 @@
 
 .search img {
     height: 30px;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 .name {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    display: flex;
+}
+
+.name img {
+    height: 60px;
+    padding: 0 30px;
+}
+
+.name .greeting {
+    display: flex;
+    flex-direction: column;
+}
+
+.name .greeting #first-part{
+    font-weight: 600;
+    padding-bottom: 7px;
+    font-size: 20px;
+}
+
+.name .greeting #second-part{
+    font-weight: 600;
+    font-size: 25px;
 }
 
 .little-name {
@@ -123,6 +166,27 @@
 .buttons {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    display: flex;
+    justify-content: end;
+    padding-right: 40px;
+}
+
+.buttons button {
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid #FFF;
+    background-color: #1992d4;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0 30px;
+    margin: 10px 10px;
+}
+
+.buttons button:hover {
+    background-color: #FFF;
+    color: #1992d4;
+    border: 1px solid #1992d4;
 }
 
 .main-panel {
