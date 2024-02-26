@@ -194,4 +194,49 @@
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     box-shadow: 0px -8px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    overflow: auto;
+}
+
+.trending {
+    grid-column: 2 / 3;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row: 1 / 3;
+}
+
+.project {
+    margin: 20px;
+    border-radius: 15px;
+    background-color: #FFF;
+    display: grid;
+    grid-template-columns: 5% 95%;
+}
+
+.orange-thing {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: #f0b429;
+    border-radius: 15px;
+}
+
+.project p {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: 14px;
+    padding: 50px 20px 20px 10px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.project h1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding: 20px 10px 0;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.8);
 }
