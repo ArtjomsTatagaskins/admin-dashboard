@@ -199,10 +199,6 @@
     overflow: auto;
 }
 
-.trending {
-    grid-column: 2 / 3;
-}
-
 .projects {
     grid-column: 1 / 2;
 }
@@ -210,6 +206,7 @@
 .projects > p {
     margin: 20px 20px 0 20px;
     font-weight: 700;
+    font-size: 19px;
 }
 
 .project-list {
@@ -222,18 +219,8 @@
 }
 
 .project {
-    margin: 20px;
-    border-radius: 15px;
-    background-color: #FFF;
-    display: grid;
     grid-template-columns: 1fr 30fr;
     grid-template-rows: 5fr 1fr;
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.3s ease;
-}
-
-.project:hover {
-    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.6); 
 }
 
 .icons-in-project {
@@ -273,34 +260,36 @@
     color: rgba(0, 0, 0, 0.6);
 }
 
+.announcement-trending-part {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
 .announcements {
-    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    height: auto;
 }
 
 .announcements > p {
     margin: 20px 20px 0 20px;
     font-weight: 700;
+    font-size: 19px;
 }
 
-.announcements-trendings {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    height: 100%;
-}
-
-.announcement-list {
-    grid-row: 1 / 2;
+.announcement-list, .project, .trending-list {
     background-color: #FFF;
-    height: 50%;
     margin: 20px;
     border-radius: 15px;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease;
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
 }
 
-.announcement-list:hover {
+.announcement-list {
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.announcement-list:hover, .project:hover, .trending-list:hover {
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.6); 
 }
 
@@ -312,12 +301,12 @@
 
 .announcement-element h1 {
     font-size: 16px;
-    padding: 15px 25px;
+    padding: 15px 0 0 25px;
 }
 
 .announcement-element p {
     font-size: 13px;
-    padding: 15px 25px;
+    padding: 15px 25px 20px 25px;
 }
 
 .grey-stripe {
@@ -331,5 +320,33 @@
     border-radius: 10px;
 }
 
+.trending-list {
+    grid-row: 2 / 3; 
+    grid-column: 1 / 2;
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+}
 
+.trending > p {
+    margin: 20px 20px 0 20px;
+    font-weight: 700;
+    font-size: 19px;
+}
 
+.trending-element {
+    padding: 20px 20px 10px 20px;
+    display: flex;
+}
+
+.trending-element img {
+    height: 40px;
+    margin-right: 20px;
+}
+
+#nickname-short, #nickname {
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+#nickname {
+    opacity: 0.6;
+}
